@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://online-fonts.com/fonts/san-francisco-pro-display');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contaner{
+    width: 1296px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.klapa__banner{
+    background-image: url('../assest/klapa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.big-contaner{
+    width: 1360px;
+    margin: 0 auto;
+}
+.trust{
+    background: radial-gradient(498.32% 130.33% at 92.87% 11.25%, rgb(51, 169, 255) 0%, rgb(51, 255, 243) 100%);
+}
+.contact{
+    background: radial-gradient(333.17% 80.94% at 51.32% 69.21%, rgb(61, 160, 252) 0%, rgb(2, 227, 214) 100%);
+}
