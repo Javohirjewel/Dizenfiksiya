@@ -21,8 +21,8 @@ const adventage = () => {
     const {t} = useTranslation()
 
   return (
-    <>
-        <motion.div initial ='hidden'
+    <> 
+        <motion.div initial ='hidden' id='about'
         whileInView='visible' className="contaner">
             <div className="title font-[700] text-[#020c31] text-[40px] border-b-solid border-b-[#ccc] border-b-[1px] pb-[32px] mb-[32px] font-first">
                 {t("advantage_title")}

@@ -17,7 +17,7 @@ const servise = () => {
         }),
     }
   return (
-    <motion.div initial ='hidden'
+    <motion.div id='service' initial ='hidden'
     whileInView='visible'  className='contaner mb-[120px] overflow-hidden'>
         <div className="title font-[700] text-[#020c31] text-[52px] border-b-solid font-first mt-[120px] ">
             Service

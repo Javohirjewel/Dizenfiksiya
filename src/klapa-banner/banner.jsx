@@ -15,7 +15,7 @@ const banner = () => {
         }
     }    
 return (
-    <motion.div 
+    <motion.div id='faq'
     initial ='hidden' whileInView='visible' 
     className='klapa__banner mt-[96px] overflow-hidden'>
         <div className="contaner flex justify-end">

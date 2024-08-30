@@ -29,13 +29,12 @@ function Header() {
                 <img className='w-[195px] h-[24px]' src={logo} />
             </a>
             <div className="flex gap-[24px] text-[#666] text-[16px] font-normal items-center ml-[100px]">
-                <div>{t('header_service')}</div>
-                <div >{t('header_about')}</div>
-                <div>{t('header_faq')}</div>
-                <div>{t('header_contact')}</div>
-                <div>
-                    Service
-                </div>
+                <a href='#about' >{t('header_about')}</a>
+                <a href='#faq'>{t('header_faq')}</a>
+                <a href='#contact' >{t('header_contact')}</a>
+                <a href='#service' >
+                    {t("header_service")}
+                </a>
               
                 <div>
                     <div onClick={e => setIsActive(!isActive)} className='cursor-pointer px-[7px] py-[5px] rounded-[10px] w-[100px] text-center border-2 border-solid select-none border-[#0000007a]'>
