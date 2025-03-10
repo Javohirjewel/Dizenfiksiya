@@ -32,6 +32,30 @@ const contact = () => {
         }
     }
     const [check, setCheck] = useState(false)
+    const [value, setValue] = useState('');
+    const [numberValue, setNumberValue] = useState('');
+    const [isValid, setIsValid] = useState(true);
+
+    const handleChange = (e) => {
+        const input = e.target.value;
+        // Faol matnni faqat harflarga ruxsat berish
+        if (/^[A-Za-z]*$/.test(input)) {
+          setValue(input); // Agar faqat harflar bo'lsa, qiymatni o'zgartiradi
+        }
+      };
+
+      const handleNumber = (e) => {
+        const input = e.target.value;
+    
+        const regex = /^[+0-9\s()-]*$/;
+    
+        if (regex.test(input)) {
+          setNumberValue(input); 
+          setIsValid(true);
+        } else {
+          setIsValid(false); 
+        }
+      };
     const sendMessage = (event) =>{
         event.preventDefault();
         const token = "7120661802:AAHlazC5s8a7_vBHLUvbgyQzU7bW-RLc4vI";
@@ -60,12 +84,16 @@ const contact = () => {
             <p className='font-first font-[700] text-[32px] leading-[125%] text-[#242825]'>
                 Malumotingizni qoldiring
             </p>
-            <input id='name'  required type="text" className='mt-[36px] rounded-[8px] text-[#242825] bg-[#f2f2f2] w-full px-[20px] py-[12px] font-second-family text-[16px] font-[500] placeholder:text-[#808080] outline-none' placeholder='Ism'/>
+            <input id='name'  required type="text" className='mt-[36px] rounded-[8px] text-[#242825] bg-[#f2f2f2] w-full px-[20px] py-[12px] font-second-family text-[16px] font-[500] placeholder:text-[#808080] outline-none' placeholder='Ism' value={value} onChange={handleChange}/>
             <div className='mt-[28px] rounded-[8px] bg-[#f2f2f2] w-full px-[20px] flex items-center gap-[5px] text-[#393e3a]'>
                 <p>
                     +
                 </p>
-              <input id='phone' required type="number" className=' bg-transparent py-[12px] font-second-family text-[16px] font-[500] placeholder:text-[#808080] outline-none w-full' placeholder='998 90 125 45 65'/>
+              <input id='phone' required  className=' bg-transparent py-[12px] font-second-family text-[16px] font-[500] placeholder:text-[#808080] outline-none w-full' placeholder='998 90 125 45 65' value={numberValue} onChange={handleNumber}/><br />
+            </div>
+            <div className='mt-4'>
+                {!isValid && <p className='text-red-700'>Telefon raqami noto'g'ri formatda!</p>}
+                <p><span className='text-[16px] font-medium'>Yozilgan raqam:</span> {numberValue}</p>
             </div>
             <div className='flex gap-[8px] font-second-family text-[14px] text-[#89958c] font-[400] mt-[14px]'>
                 <input onClick={(e) => setCheck(!check)} checked={check} className='w-[16px] rounded-[4px]' type="checkbox" />
