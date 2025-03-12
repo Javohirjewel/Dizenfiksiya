@@ -16,16 +16,16 @@ const trust = () => {
         })
     }
   return (
-    <motion.div initial ='hidden' whileInView='visible'  className='trust contaner rounded-[16px] p-[32px] flex gap-[126px]'>
+    <motion.div initial ='hidden' whileInView='visible'  className='trust contaner rounded-[16px] p-[32px] flex gap-[126px] max-lg: w-[100%]'>
         <motion.div variants={textAnimation}>
-            <img className='w-[528px] h-[510px] rounded-[12px]' src={img} alt="image" />
+            <img className='w-[528px] h-[510px] rounded-[12px] max-md:hidden max-sm:max-w-[90%]' src={img} alt="image" />
         </motion.div>
-        <motion.div variants={textAnimation} custom={2}  className='w-[642px]'>
+        <motion.div variants={textAnimation} custom={2}  className='w-[642px] max-md:w-[600px] '>
             <img className='w-[80px] h-[80px]' src={icon} alt="image" />
-            <p className='mt-[12px] font-first font-[700]  text-[ #fafafa] text-[32px] leading-[150%] text-[#fafafa]'>
+            <p className='mt-[12px] font-first font-[700]  text-[ #fafafa] text-[32px] leading-[150%] text-[#fafafa] max-md:text-[28px]'>
                 Bizga ko'p yillardan beri  kompaniyamizga ishonch bildirganlar talaygina
             </p>
-            <div className='rounded-[20px] w-[190px] h-[36px] bg-[#3360ff] flex items-center justify-center text-white font-medium text-base font-first mt-[136px]'>
+            <div className='rounded-[20px] w-[190px] h-[36px] bg-[#3360ff] flex items-center justify-center text-white font-medium text-base font-first mt-[136px] max-md:mt-[100px]'>
                 Bog'lanish
             </div>
         </motion.div>

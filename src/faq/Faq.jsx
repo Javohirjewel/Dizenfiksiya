@@ -23,7 +23,7 @@ const faqss = () => {
         <div className='font-first font-[700] text-[48px] text-[#020c31] pt-[32px]'>
             FAQ
         </div>
-        <div className='font-first text-[24px] text-[#676d83] font-[500] w-[80%] '>
+        <div className='font-first text-[24px] text-[#676d83] font-[500] w-[80%] max-md:text-[20px]'>
             <div  className='border-b-[#ccc] border-b-[1px]  pb-[30px] '>
             <p onClick={e => {
                 setIsActive(!isActive)

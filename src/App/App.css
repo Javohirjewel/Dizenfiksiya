@@ -6,8 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .contaner{
-    width: 1296px;
+    width: 90%;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -15,9 +16,11 @@
     background-image: url('../assest/klapa.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 580px;
 }
 .big-contaner{
-    width: 1360px;
+    width: 107%;
     margin: 0 auto;
 }
 .trust{

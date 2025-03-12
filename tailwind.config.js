@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +6,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+  
     fontFamily:{
       'first':  ["Unbounded", 'sans-serif'],
       'second-family': ["SF Pro Display", 'sans-serif']

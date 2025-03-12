@@ -38,17 +38,14 @@ const contact = () => {
 
     const handleChange = (e) => {
         const input = e.target.value;
-        // Faol matnni faqat harflarga ruxsat berish
         if (/^[A-Za-z]*$/.test(input)) {
-          setValue(input); // Agar faqat harflar bo'lsa, qiymatni o'zgartiradi
+          setValue(input);
         }
       };
 
       const handleNumber = (e) => {
         const input = e.target.value;
-    
         const regex = /^[+0-9\s()-]*$/;
-    
         if (regex.test(input)) {
           setNumberValue(input); 
           setIsValid(true);
@@ -77,10 +74,9 @@ const contact = () => {
         }).catch((error) => 
             alert("xatolik"))
     }
-
   return (
     <motion.div variants={contactAnimation}  initial ='hidden' whileInView='visible' id='contact'  className='contact big-contaner p-[32px] flex gap-[198px] relative mb-[29px] mt-[80px]'>
-        <motion.form id='myForm' onSubmit={sendMessage} variants={textAnimation} className="inp bg-white rounded-[8px] w-[456px] px-[24px] pt-[28px] pb-[32px]">
+        <motion.form id='myForm' onSubmit={sendMessage} variants={textAnimation} className="inp bg-white rounded-[8px] w-[456px] px-[24px] pt-[28px] pb-[32px] z-30">
             <p className='font-first font-[700] text-[32px] leading-[125%] text-[#242825]'>
                 Malumotingizni qoldiring
             </p>
@@ -107,10 +103,10 @@ const contact = () => {
                 Yozilish
             </button>
         </motion.form>
-        <div className='w-[338px] font-first font-[500] text-[20px] leading-[120%] mt-[28px] text-[#fafafa]'>
+        <div className='w-[338px] font-first font-[500] text-[20px] leading-[120%] mt-[28px] max-md:hidden text-[#fafafa]'>
             Bizga ko'p yillardan beri  kompaniyamizga ishonch bildirganlar talaygina
         </div>
-        <img src={person} alt="image" className='w-[461px] absolute bottom-0 right-0' />
+        <img src={person} alt="image" className='w-[461px] absolute bottom-0 right-0  max-md:overflow-hidden' />
     </motion.div>
   )
 }
